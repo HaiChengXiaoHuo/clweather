@@ -9,7 +9,7 @@ import org.litepal.crud.DataSupport;
  */
 
 public class Province extends DataSupport {
-//    LitePal中的每一个类都必须继承DataSupport类
+    //    LitePal中的每一个类都必须继承DataSupport类
 
     private int id;
     private String provinceName;//省的名字

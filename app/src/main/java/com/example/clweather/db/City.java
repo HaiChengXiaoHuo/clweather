@@ -8,7 +8,7 @@ import org.litepal.crud.DataSupport;
  * 类备注：市的实体类
  */
 
-public class City extends DataSupport{
+public class City extends DataSupport {
     private int id;
     private String cityName;
     private int cityCode;

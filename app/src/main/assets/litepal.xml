@@ -1,9 +1,9 @@
 <litepal>
-    <dbname value = "cl_weather"/>
-    <verson value = "1"/>
-    <list >
-        <mapping class = "com.example.clweather.db.Province"/>
-        <mapping class = "com.example.clweather.db.City"/>
-        <mapping class = "com.example.clweather.db.Country"/>
+    <dbname value="cl_weather"/>
+    <version value="1"/>
+    <list>
+        <mapping class="com.example.clweather.db.Province"/>
+        <mapping class="com.example.clweather.db.City"/>
+        <mapping class="com.example.clweather.db.County"/>
     </list>
 </litepal>
