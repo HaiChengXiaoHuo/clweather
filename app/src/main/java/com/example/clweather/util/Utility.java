@@ -12,19 +12,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * 创建时间：2017/7/4.
- * <p>
- * 类备注：json解析工具类
- */
-
 public class Utility {
 
-    /*
-    * 解析和处理服务器返回的省级数据
-    * 先使用jsonarray和jsonobject将数据解析出来，然后组装成实体类对象，
-    * 再调用save（）方法将数据存储到数据库中
-    * */
+    /**
+     * 解析和处理服务器返回的省级数据
+     */
     public static boolean handleProvinceResponse(String response) {
         if (!TextUtils.isEmpty(response)) {
             try {
@@ -37,7 +29,6 @@ public class Utility {
                     province.save();
                 }
                 return true;
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -45,9 +36,9 @@ public class Utility {
         return false;
     }
 
-    /*
-    * 解析和处理服务器返回的市级数据
-    * */
+    /**
+     * 解析和处理服务器返回的市级数据
+     */
     public static boolean handleCityResponse(String response, int provinceId) {
         if (!TextUtils.isEmpty(response)) {
             try {
@@ -61,7 +52,6 @@ public class Utility {
                     city.save();
                 }
                 return true;
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -69,10 +59,9 @@ public class Utility {
         return false;
     }
 
-
-    /*
-    * 解析和处理服务器返回的市级数据
-    * */
+    /**
+     * 解析和处理服务器返回的县级数据
+     */
     public static boolean handleCountyResponse(String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
             try {
@@ -93,7 +82,9 @@ public class Utility {
         return false;
     }
 
-    /*将返回的json数据解析成weather实体类*/
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     */
     public static Weather handleWeatherResponse(String response) {
         try {
             JSONObject jsonObject = new JSONObject(response);

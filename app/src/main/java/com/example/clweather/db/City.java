@@ -2,16 +2,14 @@ package com.example.clweather.db;
 
 import org.litepal.crud.DataSupport;
 
-/**
- * 创建时间：2017/7/4.
- * <p>
- * 类备注：市的实体类
- */
-
 public class City extends DataSupport {
+
     private int id;
+
     private String cityName;
+
     private int cityCode;
+
     private int provinceId;
 
     public int getId() {
@@ -45,4 +43,5 @@ public class City extends DataSupport {
     public void setProvinceId(int provinceId) {
         this.provinceId = provinceId;
     }
+
 }
